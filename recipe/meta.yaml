@@ -10,10 +10,12 @@ source:
   sha256: 7eaf7a2ea7d4d38a56dd6d2506574464bddf7cf284c960801679942377c297bc
 
 build:
-  number: 0
+  noarch: python
+  number: 1
 
 requirements:
-  build:
+  host:
+    - pip
     - python
   run:
     - python
