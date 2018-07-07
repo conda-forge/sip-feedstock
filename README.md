@@ -20,14 +20,15 @@ generated code.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/sip-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/sip-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/sip-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/sip-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/sip-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/sip-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/sip-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/sip-feedstock)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/sip/badges/version.svg)](https://anaconda.org/conda-forge/sip)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/sip/badges/downloads.svg)](https://anaconda.org/conda-forge/sip)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-sip-green.svg)](https://anaconda.org/conda-forge/sip) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/sip.svg)](https://anaconda.org/conda-forge/sip) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/sip.svg)](https://anaconda.org/conda-forge/sip) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/sip.svg)](https://anaconda.org/conda-forge/sip) |
 
 Installing sip
 ==============
