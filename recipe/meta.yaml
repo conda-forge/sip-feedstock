@@ -5,7 +5,6 @@ package:
   version: {{ version }}
 
 source:
-  fn:   sip-{{ version }}.tar.gz
   url:  http://sourceforge.net/projects/pyqt/files/sip/sip-{{ version }}/sip-{{ version }}.tar.gz
   sha256: 7eaf7a2ea7d4d38a56dd6d2506574464bddf7cf284c960801679942377c297bc
 
@@ -14,6 +13,9 @@ build:
 
 requirements:
   build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+  host:
     - python
   run:
     - python
