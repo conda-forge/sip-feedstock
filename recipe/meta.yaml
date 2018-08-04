@@ -7,6 +7,8 @@ package:
 source:
   url:  http://sourceforge.net/projects/pyqt/files/sip/sip-{{ version }}/sip-{{ version }}.tar.gz
   sha256: 7eaf7a2ea7d4d38a56dd6d2506574464bddf7cf284c960801679942377c297bc
+  patches:
+    - 0001-Do-not-override-CC-CXX-LINK-in-sipgen-Makefile.patch
 
 build:
   number: 0
@@ -21,6 +23,8 @@ requirements:
     - python
 
 test:
+  requires:
+    - {{ compiler('cxx') }}
   imports:
     - sip
   files:
@@ -44,5 +48,6 @@ about:
 extra:
   recipe-maintainers:
     - ccordoba12
+    - mingwandroid
     - msarahan
     - ocefpaf
