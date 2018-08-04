@@ -8,10 +8,11 @@ osx_image: xcode6.4
 
 env:
   matrix:
-    
-    - CONDA_PY=27
-    - CONDA_PY=35
-    - CONDA_PY=36
+    - CONFIG=osx_python2.7
+    - CONFIG=osx_python3.5
+    - CONFIG=osx_python3.6
+    - CONFIG=osx_python3.7
+
   global:
     # The BINSTAR_TOKEN secure variable. This is defined canonically in conda-forge.yml.
     - secure: "GmfdVGNnh38cwHMoETs7r4rf0is/EP3OYppkDZyZhYzOBrwm6TgTRH50+lJznc4vco13q/fwUVm/hhP1tteyjDPOP6SiuAXTRPzi8kt0ezt8YZ9L2ly/9SgRmWFb7H5OrGnuJImKnuTXQ/Upq+Mk6umthXRUil4+8tpZXnAtLQAkGpwr0rM4xh6eYPJBFVTs1XWKKljwygqQ+zGIGQ/pft1jHIwyTJHMlB2ffeUPGieD5eDsB7xKojOOnnmxTxKrO/5oivOE1bbeCT8sueWC3iwDHdWzDC70S02hAKvzx0Cmvbt+KGInRbArQbC8IBDu4vnJvq1wxLtwxVQPLtUXt5eAf8jFLXdNansqpTTYjIVcVlY9PbZa66h94vHljhUEhbcABwcPW6xpko2hXJw8ylwreUuOAlRqeaktkrR+6KIm0i9ydbo0Wyr2cmzcX+aRSLMefAHN9lCXkrbXvIvFv2Xo+M0F/6t3EU12FfOzwbCk50uoRUdmiw0Csp1GYlLWSWRDB8RFYRDI/jSfaEHqHFOndQjJcq+PgK0Os+erLRhz41Pp1aQGSltV9LPpZpmhXxncc2ALTlu5GklyN+vHHHTzSM0eB/zgQ4yhA6L2OD4PXA30Gj9H4OYZFp/+ZhfmpMVDHXltq3Vs/kmVrh8ohJbXzu3TVmSGrSV3HO6fesY="
@@ -20,7 +21,7 @@ env:
 before_install:
     # Fast finish the PR.
     - |
-      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-build-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
+      (curl https://raw.githubusercontent.com/conda-forge/conda-forge-ci-setup-feedstock/master/recipe/ff_ci_pr_build.py | \
           python - -v --ci "travis" "${TRAVIS_REPO_SLUG}" "${TRAVIS_BUILD_NUMBER}" "${TRAVIS_PULL_REQUEST}") || exit 1
 
     # Remove homebrew.
@@ -52,10 +53,10 @@ install:
       conda config --add channels defaults
       conda config --add channels conda-forge
       conda config --set show_channel_urls true
-      conda install --yes --quiet conda-forge-build-setup
+      conda install --yes --quiet conda-forge-ci-setup=1
       source run_conda_forge_build_setup
 
 script:
-  - conda build ./recipe
+  - conda build ./recipe -m ./.ci_support/${CONFIG}.yaml
 
-  - upload_or_check_non_existence ./recipe conda-forge --channel=main
+  - upload_or_check_non_existence ./recipe conda-forge --channel=main -m ./.ci_support/${CONFIG}.yaml
