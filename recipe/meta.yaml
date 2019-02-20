@@ -26,6 +26,7 @@ requirements:
 test:
   requires:
     - {{ compiler('cxx') }}
+    - make  # [unix]
   imports:
     - sip
   files:
