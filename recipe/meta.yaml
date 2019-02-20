@@ -17,6 +17,7 @@ requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
+    - make  # [unix]
   host:
     - python
   run:
@@ -25,6 +26,7 @@ requirements:
 test:
   requires:
     - {{ compiler('cxx') }}
+    - make  # [unix]
   imports:
     - sip
   files:
