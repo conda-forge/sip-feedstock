@@ -1,12 +1,12 @@
-{% set version = "4.19.13" %}
+{% set version = "4.19.18" %}
 
 package:
   name: sip
   version: {{ version }}
 
 source:
-  url:  http://sourceforge.net/projects/pyqt/files/sip/sip-{{ version }}/sip-{{ version }}.tar.gz
-  sha256: e353a7056599bf5fbd5d3ff9842a6ab2ea3cf4e0304a0f925ec5862907c0d15e
+  url:  https://www.riverbankcomputing.com/static/Downloads/sip/{{ version }}/sip-{{ version }}.tar.gz
+  sha256: c0bd863800ed9b15dcad477c4017cdb73fa805c25908b0240564add74d697e1e
   patches:
     - 0001-Do-not-override-CC-CXX-LINK-in-sipgen-Makefile.patch
 
