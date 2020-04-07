@@ -1,12 +1,12 @@
-{% set version = "4.19.20" %}
+{% set version = "4.19.22" %}
 
 package:
   name: sip
   version: {{ version }}
 
 source:
-  url:  https://www.riverbankcomputing.com/static/Downloads/sip/{{ version }}/sip-{{ version }}.tar.gz
-  sha256: 04cc2f87ac97e8718d8e1ef036e3ec26050ab44c21f9277618d5b67432fcbfd6
+  url: https://www.riverbankcomputing.com/static/Downloads/sip/{{ version }}/sip-{{ version }}.tar.gz
+  sha256: e1b768824ec1a2ee38dd536b6b6b3d06de27b00a2f5f55470d1b512306e3be45
   patches:
     - 0001-Do-not-override-CC-CXX-LINK-in-sipgen-Makefile.patch
 
