@@ -9,9 +9,11 @@ source:
   sha256: e1b768824ec1a2ee38dd536b6b6b3d06de27b00a2f5f55470d1b512306e3be45
   patches:
     - 0001-Do-not-override-CC-CXX-LINK-in-sipgen-Makefile.patch
+    # AttributeError: module 'distutils.sysconfig' has no attribute 'get_config_h_filename'
+    - get_config_h_filename.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
