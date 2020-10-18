@@ -5,9 +5,13 @@ Home: http://www.riverbankcomputing.com/software/sip/intro
 
 Package license: GPL-3.0
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sip-feedstock/blob/master/LICENSE.txt)
 
 Summary: Create Python bindings for C and C++ libraries
+
+Development: https://github.com/ifwe/sip
+
+Documentation: http://pyqt.sourceforge.net/Docs/sip4/
 
 SIP is a tool that makes it very easy to create Python bindings for C and
 C++ libraries. SIP comprises a code generator and a Python module. The
