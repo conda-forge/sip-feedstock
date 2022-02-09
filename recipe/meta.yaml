@@ -39,6 +39,7 @@ requirements:
 
 test:
   requires:
+    - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - make  # [not win]
     - pip
