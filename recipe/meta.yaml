@@ -28,12 +28,12 @@ requirements:
     - {{ compiler('cxx') }}
     - make  # [not win]
   host:
-    - python >=3.6
+    - python
     - pip
     - packaging
     - toml
   run:
-    - python >=3.6
+    - python
     - packaging
     - toml
 
