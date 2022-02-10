@@ -10,8 +10,10 @@ source:
   sha256: 204f0240db8999a749d638a987b351861843e69239b811ec3d1881412c3706a6
 
 build:
-  number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  number: 1
+  script: "{{ PYTHON }} -m pip install . -vv"  # [not osx]
+  run_exports:
+    - {{ pin_subpackage('sip', max_pin='x.x') }}
   entry_points:
     - sip-distinfo = sipbuild.distinfo.main:main
     - sip-module = sipbuild.module.main:main
