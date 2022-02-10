@@ -1,1 +1,1 @@
-From http://pyqt.sourceforge.net/Docs/sip4/using.html#a-simple-c-example
+From https://www.riverbankcomputing.com/static/Docs/sip/examples.html

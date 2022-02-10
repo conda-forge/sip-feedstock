@@ -1,24 +1,21 @@
 About sip
 =========
 
-Home: http://www.riverbankcomputing.com/software/sip/intro
+Home: https://www.riverbankcomputing.com/software/sip/
 
-Package license: GPL-3.0
+Package license: GPL-3.0-only
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sip-feedstock/blob/master/LICENSE.txt)
 
-Summary: Create Python bindings for C and C++ libraries
+Summary: A Python bindings generator for C/C++ libraries
 
-Development: https://github.com/ifwe/sip
+Documentation: https://www.riverbankcomputing.com/software/sip/
 
-Documentation: http://pyqt.sourceforge.net/Docs/sip4/
-
-SIP is a tool that makes it very easy to create Python bindings for C and
-C++ libraries. SIP comprises a code generator and a Python module. The
-code generator processes a set of specification files and generates C or
-C++ code which is then compiled to create the bindings extension module.
-The SIP Python module provides support functions to the automatically
-generated code.
+SIP is a collection of tools that makes it very easy to create Python
+bindings for C and C++ libraries. It was originally developed in 1998
+to create PyQt, the Python bindings for the Qt toolkit, but can be
+used to create bindings for any C or C++ library. For example it is
+also used to generate wxPython, the Python bindings for wxWidgets.
 
 
 Current build status
@@ -240,7 +237,8 @@ conda search sip --channel conda-forge
 About conda-forge
 =================
 
-[![Powered by NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](http://numfocus.org)
+[![Powered by
+NumFOCUS](https://img.shields.io/badge/powered%20by-NumFOCUS-orange.svg?style=flat&colorA=E1523D&colorB=007D8A)](https://numfocus.org)
 
 conda-forge is a community-led conda channel of installable packages.
 In order to provide high-quality builds, the process has been automated into the
@@ -300,6 +298,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@andfoy](https://github.com/andfoy/)
 * [@ccordoba12](https://github.com/ccordoba12/)
 * [@mingwandroid](https://github.com/mingwandroid/)
 * [@msarahan](https://github.com/msarahan/)
