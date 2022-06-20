@@ -1,5 +1,5 @@
 {% set name = "sip" %}
-{% set version = "6.5.1" %}
+{% set version = "6.6.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 204f0240db8999a749d638a987b351861843e69239b811ec3d1881412c3706a6
+  sha256: 0e3efac1c5dfd8e525ae57140927df26993e13f58b89d1577c314f4105bfd90d
 
 build:
-  number: 2
-  script: "{{ PYTHON }} -m pip install . -vv"  # [win]
+  number: 0
+  script: {{ PYTHON }} -m pip install . -vv  # [win]
   run_exports:
     - {{ pin_subpackage('sip', max_pin='x.x') }}
   entry_points:
@@ -38,6 +38,7 @@ requirements:
     - python
     - packaging
     - toml
+    - ply
 
 test:
   requires:
@@ -58,7 +59,7 @@ about:
   license: GPL-3.0-only
   license_family: GPL
   license_file: LICENSE-GPL3
-  summary: 'A Python bindings generator for C/C++ libraries'
+  summary: A Python bindings generator for C/C++ libraries
   description: |
     SIP is a collection of tools that makes it very easy to create Python
     bindings for C and C++ libraries. It was originally developed in 1998
