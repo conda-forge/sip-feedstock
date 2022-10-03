@@ -11,6 +11,7 @@ source:
 
 build:
   number: 0
+  skip: True  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv  # [win]
   run_exports:
     - {{ pin_subpackage('sip', max_pin='x.x') }}
