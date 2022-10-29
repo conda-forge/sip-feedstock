@@ -1,5 +1,5 @@
 {% set name = "sip" %}
-{% set version = "6.7.2" %}
+{% set version = "6.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 325016c787d0bff20999c420339ad816fbfd39a7c49b2c4dcda12b63c379dbda
+  sha256: 564a7a8c5c1a42f1b69e9258af2b43ea31fbbab206d2e182e75c173caf7d83f8
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv  # [win]
   run_exports:
