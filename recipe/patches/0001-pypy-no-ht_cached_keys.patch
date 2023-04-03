@@ -1,0 +1,24 @@
+diff --git a/sipbuild/module/source/13/sip_core.c b/sipbuild/module/source/13/sip_core.c
+index c72f13a..b4f97a4 100644
+--- a/sipbuild/module/source/13/sip_core.c
++++ b/sipbuild/module/source/13/sip_core.c
+@@ -245,7 +245,9 @@ static sipWrapperType sipWrapper_Type = {
+         0,                  /* ht_name */
+         0,                  /* ht_slots */
+         0,                  /* ht_qualname */
++#ifndef PYPY_VERSION
+         0,                  /* ht_cached_keys */
++#endif
+ #if PY_VERSION_HEX >= 0x03090000
+         0,                  /* ht_module */
+ #endif
+@@ -9696,7 +9698,9 @@ sipWrapperType sipSimpleWrapper_Type = {
+         0,                  /* ht_name */
+         0,                  /* ht_slots */
+         0,                  /* ht_qualname */
++#ifndef PYPY_VERSION
+         0,                  /* ht_cached_keys */
++#endif
+ #if PY_VERSION_HEX >= 0x03090000
+         0,                  /* ht_module */
+ #endif
