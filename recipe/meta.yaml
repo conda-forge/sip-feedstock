@@ -36,11 +36,11 @@ requirements:
     - python
     - pip
     - packaging
-    - toml
+    - tomli
   run:
     - python
     - packaging
-    - toml
+    - tomli
     - ply
 
 test:
