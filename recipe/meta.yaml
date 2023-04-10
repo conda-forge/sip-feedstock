@@ -1,5 +1,5 @@
 {% set name = "sip" %}
-{% set version = "6.7.7" %}
+{% set version = "6.7.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: dee9c06fa8ae6d441a401f922867fc6196edda274eebd9fbfec54f0769c2a9e2
+  sha256: 7e7186a36818c9d325c82e59ac5b049d9022c2d5783942c38d49497ac8a94c8f
   patches:
     - patches/0001-pypy-no-ht_cached_keys.patch
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv  # [win]
   run_exports:
