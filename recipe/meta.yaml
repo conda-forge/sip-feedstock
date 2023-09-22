@@ -12,7 +12,7 @@ source:
     - patches/0001-pypy-no-ht_cached_keys.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv  # [win]
   run_exports:
