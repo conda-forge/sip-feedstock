@@ -1,5 +1,5 @@
 {% set name = "sip" %}
-{% set version = "6.8.1" %}
+{% set version = "6.8.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3002df415e168ac3ffe393942dbc7131cb82ade50000e1526f46a88ade26f598
+  sha256: 2e65a423037422ccfde095c257703a8ff45cc1c89bdaa294d7819bc836c87639
   patches:
     - patches/0001-pypy-no-ht_cached_keys.patch
 
