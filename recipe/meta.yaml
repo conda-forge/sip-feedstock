@@ -1,5 +1,5 @@
 {% set name = "sip" %}
-{% set version = "6.8.3" %}
+{% set version = "6.8.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 888547b018bb24c36aded519e93d3e513d4c6aa0ba55b7cc1affbd45cf10762c
+  sha256: 7fc959e48e6ec5d5af8bd026f69f5e24d08b3cb8abb342176f5ab8030cc07d7a
   patches:
     - patches/0001-pypy-no-ht_cached_keys.patch
 
@@ -30,6 +30,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - make  # [not win]
   host:
