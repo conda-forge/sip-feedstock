@@ -12,7 +12,7 @@ source:
     - patches/0001-pypy-no-ht_cached_keys.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<37]
   script: {{ PYTHON }} -m pip install . -vv  # [win]
   run_exports:
@@ -30,6 +30,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - make  # [not win]
   host:
