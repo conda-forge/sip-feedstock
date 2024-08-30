@@ -44,6 +44,7 @@ requirements:
     - packaging
     - tomli
     - ply
+    - setuptools
 
 test:
   requires:
