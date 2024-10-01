@@ -61,9 +61,9 @@ test:
     - test
 
 about:
-  home: https://www.riverbankcomputing.com/software/sip/
-  license: GPL-3.0-only
-  license_family: GPL
+  home: https://github.com/Python-SIP/sip/
+  license: BSD 2-Clause
+  license_family: BSD
   license_file: LICENSE
   summary: A Python bindings generator for C/C++ libraries
   description: |
