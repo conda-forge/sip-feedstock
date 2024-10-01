@@ -61,7 +61,7 @@ test:
     - test
 
 about:
-  home: https://www.riverbankcomputing.com/software/sip/
+  home: https://github.com/Python-SIP/sip/
   license_family: BSD
   license: BSD-2-Clause
   license_file:
@@ -75,7 +75,7 @@ about:
     to create PyQt, the Python bindings for the Qt toolkit, but can be
     used to create bindings for any C or C++ library. For example it is
     also used to generate wxPython, the Python bindings for wxWidgets.
-  doc_url: https://www.riverbankcomputing.com/software/sip/
+  doc_url: https://python-sip.readthedocs.io/en/stable/
 
 extra:
   recipe-maintainers:
