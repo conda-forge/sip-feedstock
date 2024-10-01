@@ -64,7 +64,7 @@ about:
   home: https://www.riverbankcomputing.com/software/sip/
   license: GPL-3.0-only
   license_family: GPL
-  license_file: LICENSE-GPL3
+  license_file: LICENSE
   summary: A Python bindings generator for C/C++ libraries
   description: |
     SIP is a collection of tools that makes it very easy to create Python
