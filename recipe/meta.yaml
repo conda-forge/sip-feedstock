@@ -1,5 +1,5 @@
 {% set name = "sip" %}
-{% set version = "6.8.3" %}
+{% set version = "6.8.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 888547b018bb24c36aded519e93d3e513d4c6aa0ba55b7cc1affbd45cf10762c
+  sha256: 7fc959e48e6ec5d5af8bd026f69f5e24d08b3cb8abb342176f5ab8030cc07d7a
   patches:
     - patches/0001-pypy-no-ht_cached_keys.patch
 
 build:
-  number: 1
-  skip: true  # [py<37]
-  script: {{ PYTHON }} -m pip install . -vv  # [win]
+  number: 0
+  skip: true  # [py<38]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation  # [win]
   run_exports:
     - {{ pin_subpackage('sip', max_pin='x.x') }}
   entry_points:
@@ -61,10 +61,13 @@ test:
     - test
 
 about:
-  home: https://www.riverbankcomputing.com/software/sip/
-  license: GPL-3.0-only
-  license_family: GPL
-  license_file: LICENSE-GPL3
+  home: https://github.com/Python-SIP/sip/
+  license_family: BSD
+  license: BSD-2-Clause
+  license_file:
+    - LICENSE
+    - sipbuild/module/source/12/LICENSE
+    - sipbuild/module/source/13/LICENSE
   summary: A Python bindings generator for C/C++ libraries
   description: |
     SIP is a collection of tools that makes it very easy to create Python
@@ -72,7 +75,7 @@ about:
     to create PyQt, the Python bindings for the Qt toolkit, but can be
     used to create bindings for any C or C++ library. For example it is
     also used to generate wxPython, the Python bindings for wxWidgets.
-  doc_url: https://www.riverbankcomputing.com/software/sip/
+  doc_url: https://python-sip.readthedocs.io/en/stable/
 
 extra:
   recipe-maintainers:
