@@ -13,8 +13,8 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<37]
-  script: {{ PYTHON }} -m pip install . -vv  # [win]
+  skip: true  # [py<38]
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation  # [win]
   run_exports:
     - {{ pin_subpackage('sip', max_pin='x.x') }}
   entry_points:
@@ -62,9 +62,12 @@ test:
 
 about:
   home: https://www.riverbankcomputing.com/software/sip/
-  license: GPL-3.0-only
-  license_family: GPL
-  license_file: LICENSE-GPL3
+  license_family: BSD
+  license: BSD-2-Clause
+  license_file:
+    - LICENSE
+    - sipbuild/module/source/12/LICENSE
+    - sipbuild/module/source/13/LICENSE
   summary: A Python bindings generator for C/C++ libraries
   description: |
     SIP is a collection of tools that makes it very easy to create Python
