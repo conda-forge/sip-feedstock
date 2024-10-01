@@ -12,14 +12,14 @@ source:
     - patches/0001-pypy-no-ht_cached_keys.patch
 
 build:
-  number: 0
+  number: 1
   skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation  # [win]
   run_exports:
     - {{ pin_subpackage('sip', max_pin='x.x') }}
   entry_points:
-    - sip-distinfo = sipbuild.distinfo.main:main
-    - sip-module = sipbuild.module.main:main
+    - sip-distinfo = sipbuild.tools.distinfo:main
+    - sip-module = sipbuild.tools.module:main
     - sip-build = sipbuild.tools.build:main
     - sip-install = sipbuild.tools.install:main
     - sip-sdist = sipbuild.tools.sdist:main
@@ -54,7 +54,12 @@ test:
     - pip
   commands:
     - pip check
+    - sip-distinfo --help
+    - sip-module --help
     - sip-build --help
+    - sip-install --help
+    - sip-sdist --help
+    - sip-wheel --help
   imports:
     - sipbuild
   files:
