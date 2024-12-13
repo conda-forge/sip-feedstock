@@ -3,13 +3,13 @@ About sip-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/sip-feedstock/blob/main/LICENSE.txt)
 
-Home: https://www.riverbankcomputing.com/software/sip/
+Home: https://github.com/Python-SIP/sip/
 
-Package license: GPL-3.0-only
+Package license: BSD-2-Clause
 
 Summary: A Python bindings generator for C/C++ libraries
 
-Documentation: https://www.riverbankcomputing.com/software/sip/
+Documentation: https://python-sip.readthedocs.io/en/stable/
 
 SIP is a collection of tools that makes it very easy to create Python
 bindings for C and C++ libraries. It was originally developed in 1998
