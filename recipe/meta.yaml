@@ -54,6 +54,7 @@ test:
     - pip
   commands:
     - pip check
+    - "pip show {{ name }} | grep -Fx 'Version: {{ version }}'"
     - sip-distinfo --help
     - sip-module --help
     - sip-build --help
