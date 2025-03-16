@@ -36,6 +36,7 @@ requirements:
   host:
     - python
     - setuptools
+    - setuptools_scm >=8
     - pip
     - packaging
     - tomli
@@ -54,6 +55,7 @@ test:
     - pip
   commands:
     - pip check
+    # make sure the version reported by pip is correct
     - "pip show {{ name }} | grep -Fx 'Version: {{ version }}'"
     - sip-distinfo --help
     - sip-module --help
