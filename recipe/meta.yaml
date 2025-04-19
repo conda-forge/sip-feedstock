@@ -8,8 +8,6 @@ package:
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 7904be5190d7879952563b78a3af0e58fa27d9525af7f53f93eac7a83b433e7b
-  patches:
-    - patches/0001-pypy-no-ht_cached_keys.patch
 
 build:
   number: 0
