@@ -72,8 +72,8 @@ about:
   license: BSD-2-Clause
   license_file:
     - LICENSE
-    - sipbuild/module/source/12/LICENSE
-    - sipbuild/module/source/13/LICENSE
+    - sipbuild/module/source/12/17/LICENSE
+    - sipbuild/module/source/13/1/LICENSE
   summary: A Python bindings generator for C/C++ libraries
   description: |
     SIP is a collection of tools that makes it very easy to create Python
