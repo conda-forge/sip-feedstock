@@ -1,5 +1,5 @@
 {% set name = "sip" %}
-{% set version = "6.11.0" %}
+{% set version = "6.11.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 237d24ead97a5ef2e8c06521dd94c38626e43702a2984c8a2843d7e67f07e799
+  sha256: 3dae4baaf9e9f781d84bf293e0e2938dc7f44b826837889026eba53bd36c81b5
 
 build:
   number: 0
