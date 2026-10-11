@@ -1,5 +1,5 @@
 {% set name = "sip" %}
-{% set version = "6.17.0" %}
+{% set version = "6.17.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8c8839fb1fe87247cd315671c41897780b760aa76d01a6440f85c1fe76456bf4
+  sha256: 34e2c1389e25394f5ba3c6b9d999d04373baf8d7161410536d444f48226d2f50
 
 build:
   number: 0
